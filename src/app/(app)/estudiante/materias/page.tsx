@@ -55,7 +55,7 @@ export default async function MyEnrollmentsPage() {
                         </div>
                       )}
                       <Badge tone={STATUS_TONE[e.status]}>{STATUS_LABEL[e.status]}</Badge>
-                      {e.status === "activa" && <CancelButton id={e._id} name={e.subject.name} />}
+                      {e.status === "activa" && e.period.status === "abierto" && <CancelButton id={e._id} name={e.subject.name} />}
                     </Card>
                   </li>
                 ))}
